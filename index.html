@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="tema-claro"
+    </body>
+    <section class="caja">
+      <button class="toggle-tema" id="toggle-tema">
+        <span class="track">
+          <span class="thumb">
+            <img
+              id="icono-oscuro"
+              src="icon/icono-oscuro (1).png"
+              alt="modo oscuro"
+            />
+          </span>
+        </span>
+      </button>
+
+      <div class="pantalla">
+        <p id="valor-pantalla">10+1</p>
+      </div>
+
+      <div class="teclado">
+        <button type="button" class="parentesis-i resaltar">(</button>
+        <button type="button" class="parentesis-d resaltar">)</button>
+        <button type="button" class="borrar-todo resaltar">AC</button>
+        <button type="button" class="borrar resaltar">⌫</button>
+
+        <button type="button" class="num7">7</button>
+        <button type="button" class="num8">8</button>
+        <button type="button" class="num9">9</button>
+        <button type="button" class="dividir resaltar">÷</button>
+
+        <button type="button" class="num4">4</button>
+        <button type="button" class="num5">5</button>
+        <button type="button" class="num6">6</button>
+        <button type="button" class="por resaltar">×</button>
+
+        <button type="button" class="num1">1</button>
+        <button type="button" class="num2">2</button>
+        <button type="button" class="num3">3</button>
+        <button type="button" class="resta resaltar">-</button>
+
+        <button type="button" class="punto resaltar">.</button>
+        <button type="button" class="cero">0</button>
+        <button type="button" class="operar">=</button>
+        <button type="button" class="suma resaltar">+</button>
+      </div>
+      <p id="resultado"></p>
+    </section>
+    <section class="prueba"></section>
+    <script src="script.js"></script>
+  </body>
+</html>
