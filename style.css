@@ -142,7 +142,16 @@ button {
   font-size: 14vw;
   color: var(--valor-pantalla-color-fuente);
   font-weight: bold;
-  line-height: 0;
+}
+
+#expresion,
+#valor-pantalla {
+  margin: 0;
+  padding: 0;
+}
+
+#expresion {
+  font-size: 2rem;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -152,7 +161,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .dividir {
-  font-size: 22px;
+  font-size: clamp(0.85rem, 5vw, 1.4rem);
 }
 
 .resaltar {
@@ -165,7 +174,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background: var(--operar-fondo);
   box-shadow: var(--operar-sombra);
   color: var(--color-fuente-operar);
-  font-size: 35px;
+  font-size: clamp(0rem, 5vw, 1.4rem);
 }
 .teclado {
   display: grid;
@@ -179,7 +188,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .pantalla {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: end;
   flex: 1;
   padding: 0px 15px 15px 0px;
@@ -211,21 +220,65 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 3vw;
+  left: clamp(5px, 2vw, 10px);
   top: 50%;
   transform: translateY(-50%);
-  width: 35px;
-  height: 35px;
+  width: clamp(30px, 11vw, 35px);
+  height: clamp(30px, 11vw, 35px);
   background: var(--thumb-fondo);
   border-top: var(--thumb-borde-arriba);
   border-left: var(--thumb-borde-derecha);
   border-right: var(--thumb-borde-izquierda);
   border-bottom: var(--thumb-borde-inferior);
   box-shadow: var(--thumb-sombra);
-  border-radius: 50%;
+  border-radius: 999px;
   cursor: pointer;
 }
 
 #icono-oscuro {
   width: 85%;
 }
+
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100dvh;
+  }
+
+  .caja {
+    width: 360px;
+    height: 100dvh;
+    border-radius: 30px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+  }
+
+  button {
+    font-size: 1.4rem;
+    border-radius: 15px;
+  }
+
+  .operar {
+    font-size: 1.4rem;
+  }
+  .dividir {
+    font-size: 1.1rem;
+  }
+  #valor-pantalla {
+    font-size: 3.8rem;
+  }
+  .track {
+    width: 32px;
+    height: 60px;
+  }
+  .thumb {
+    width: 32px;
+    height: 32px;
+    left: 8px;
+  }
+}
+
+/* * {
+  outline: 1px solid red;
+} */
